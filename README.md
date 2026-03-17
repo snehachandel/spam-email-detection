@@ -35,3 +35,6 @@ Output: Spam
 
 ## 📊 Visualizations
 ![Spam vs Ham](graph1.png)
+
+## 📈 Model Accuracy
+The model achieved an accuracy of **98%** on test data.
