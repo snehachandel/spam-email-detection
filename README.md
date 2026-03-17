@@ -26,3 +26,6 @@ Output: Spam
 - data/
 - notebooks/
 - README.md
+
+## 📊 Visualizations
+![Spam vs Ham](graph1.png)
