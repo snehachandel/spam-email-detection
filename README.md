@@ -1,40 +1,100 @@
-# 📧 Spam Email Detection
+# 📧 Spam Email Detection System
 
-This is a Machine Learning project that classifies messages as Spam or Ham using Natural Language Processing (NLP).
+A machine learning project that classifies SMS messages as **Spam** or **Ham** using Natural Language Processing (NLP) and a Naive Bayes classifier.
+
+> ✅ Achieved **~98% accuracy** on test data
+
+---
 
 ## 🚀 Features
-- Data cleaning and preprocessing
-- Data visualization
+- Text preprocessing and data cleaning
+- Exploratory Data Analysis (EDA) with visualizations
 - Text vectorization using CountVectorizer
-- Model training using Naive Bayes
-- Accuracy ~97%
+- Naive Bayes classifier for spam detection
+- 98% accuracy on the UCI SMS Spam Collection dataset
 
-## 🛠️ Tech Used
-- Python
-- Pandas
-- Scikit-learn
-- Matplotlib
+---
 
-## 🤖 How It Works
-1. The dataset contains SMS messages labeled as spam or ham.
-2. Text data is converted into numerical form using CountVectorizer.
-3. A Naive Bayes model is trained on the data.
-4. The model predicts whether a new message is spam or not.
+## 🛠️ Tech Stack
+| Tool | Purpose |
+|------|---------|
+| Python | Core language |
+| Pandas | Data manipulation |
+| Scikit-learn | ML model + vectorization |
+| Matplotlib | Data visualization |
+| Jupyter Notebook | Development environment |
 
-## 📊 Results
-The model successfully classifies spam messages with high accuracy.
-
-## 📌 Example
-Input: "Win money now!!!"  
-Output: Spam
+---
 
 ## 📂 Project Structure
-- data/
-- notebooks/
-- README.md
+```
+spam-email-detection/
+│
+├── data/
+│   └── spam.csv              # SMS Spam Collection dataset
+├── notebooks/
+│   └── spam_detection.ipynb  # Main notebook
+├── requirements.txt
+└── README.md
+```
 
-## 📊 Visualizations
-![Spam vs Ham](graph1.png)
+---
 
-## 📈 Model Accuracy
-The model achieved an accuracy of **98%** on test data.
+## ⚙️ How to Run
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/snehachandel/spam-email-detection.git
+cd spam-email-detection
+```
+
+2. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Open the notebook**
+```bash
+jupyter notebook notebooks/spam_detection.ipynb
+```
+
+---
+
+## 🤖 How It Works
+1. Load the SMS Spam Collection dataset (5,572 messages)
+2. Clean and preprocess text (lowercase, remove punctuation)
+3. Convert text to numerical features using CountVectorizer
+4. Train a Multinomial Naive Bayes model on 80% of the data
+5. Evaluate on the remaining 20% — achieving **98% accuracy**
+
+---
+
+## 📊 Results
+| Metric | Score |
+|--------|-------|
+| Accuracy | ~98% |
+| Model | Multinomial Naive Bayes |
+| Dataset | UCI SMS Spam Collection |
+
+---
+
+## 📌 Example
+```
+Input:  "Congratulations! You've won a free iPhone. Click here to claim now."
+Output: 🚨 SPAM
+
+Input:  "Hey, are we still meeting for lunch tomorrow?"
+Output: ✅ HAM
+```
+
+---
+
+## 📦 Dataset
+This project uses the [UCI SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) — a public dataset of 5,572 tagged SMS messages.
+
+---
+
+## 👩‍💻 Author
+**Sneha Chandel** — [LinkedIn](https://linkedin.com/in/sneha-chandel-766825339) | [GitHub](https://github.com/snehachandel)
+```
+
